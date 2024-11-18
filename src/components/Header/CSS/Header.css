@@ -1,14 +1,15 @@
 header{
     display: flex;
     position: sticky;
-    top:5px;
-    z-index: 100000;
-    min-height: 5vh;
+    top:0;
+    z-index: 1000;
+    min-height: 7vh;
 }
-.header-container{
+.header-container {
     padding-top: 40px;
     padding-bottom: 30px;
-    display:flex;
+    padding-left: 10px; /* Add left padding here */
+    display: flex;
     flex-direction: row;
     width: 100%;
     align-items: center;
@@ -27,7 +28,7 @@ header{
     margin: 0px 20px;
     width: 160px;
     
-    object-fit:c;
+    object-fit:cover;
     padding:0;
 }
 

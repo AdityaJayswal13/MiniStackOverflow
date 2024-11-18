@@ -1,8 +1,8 @@
-.sidebar{
+.sidebar {
     display: flex;
-    padding:20px 0px 0px 0px;
+    padding: 20px 0px 0px 20px; /* Add left padding here */
     height: 100%;
-    flex:0.5;
+    flex: 0.5;
     max-width: 200px;
     /* border-right: 1px solid #ddd; */
 }

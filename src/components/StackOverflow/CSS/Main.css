@@ -1,8 +1,8 @@
 .main{
     display: flex;
-    padding:9px 20px;
+    padding:9px 40px;
     flex:0.75;
-    flex-direction: column;
+    flex-direction: column;;
 }
 
 .main-container{
@@ -14,7 +14,7 @@
     display: flex;      
     width: 100%;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 1px;
 }
 .main-top >h2{
     font-weight: 500;
@@ -38,8 +38,8 @@ button{
     align-items: center;
     font-size: 1.1rem;
     color:rgba(0,0,0,0.8);
-    padding:0px 0px 10px 0px;
-    margin-top: 10px;
+    padding:0px 0px 1px 0px;
+    margin-top: 5px;
 }
 .main-filter{
     display: flex; 
@@ -82,11 +82,13 @@ button{
     display: flex;
     flex-direction: column;
     width: 100%;
+    
  }
+
  .question{
+    
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: 15px 0px;
-    border-bottom:1px solid #eee;
+   
  }

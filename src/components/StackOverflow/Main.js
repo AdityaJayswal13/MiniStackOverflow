@@ -37,6 +37,8 @@ function Main() {
             <div className='questions'>
                 <div className='question'>  
                     <AllQuestions/>
+                    <AllQuestions/>
+                    <AllQuestions/>
                 </div>
             </div>
         </div>

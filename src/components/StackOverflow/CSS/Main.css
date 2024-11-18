@@ -92,3 +92,67 @@ button{
     width: 100%;
    
  }
+ /* Example CSS */
+
+.main-container {
+    margin: 20px;
+}
+
+.main-top h2 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.main-dec {
+    margin-bottom: 20px;
+}
+
+.main-tabs .main-tab {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.main-tab a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.questions {
+    margin-top: 20px;
+}
+
+.question-item {
+    margin-bottom: 20px;
+}
+
+.question-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.question-item .tags {
+    margin-top: 10px;
+}
+
+.question-item .tag {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 5px;
+    background-color: #f1f1f1;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+

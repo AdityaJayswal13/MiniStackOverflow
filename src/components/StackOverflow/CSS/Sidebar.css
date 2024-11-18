@@ -1,0 +1,96 @@
+.sidebar{
+    display: flex;
+    padding:20px 0px 0px 0px;
+    height: 100%;
+    flex:0.5;
+    max-width: 200px;
+    border-right: 1px solid #ddd;
+}
+.sidebar-container{
+    display: flex;
+    width: 100%;
+}
+.sidebar-options{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+}
+
+.sidebar-option{
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+}
+
+a{
+    text-decoration: none;
+    color:rgba(0,0,0,0.5)
+}
+a:hover{
+    color :#000;
+}
+
+
+.sidebar-option > p{
+   color: rgba(0,0,0,0.5);
+   font-size: 14px;
+}
+.link{
+    display: flex;
+    flex-direction: column;
+}
+.link-tag {
+    display:flex;
+    margin-left:23px;
+    flex-direction: column;
+    align-content: center;
+    padding: 1px 0;
+    font-weight: bold;
+    line-height: 30px;
+    width: 200px;
+}
+
+.link-tag:hover{
+     color:#000;
+    opacity: 0.7;
+    max-width: 172px;
+    border-right: 6px solid rgb(255, 124, 1);
+  overflow: hidden; 
+  transition: border-right-color 0.5s ease; 
+    
+}
+.mainIcon:hover{
+    color:#000;
+    max-width: 200px;
+    border-right: 8px solid rgb(243, 132, 6);
+    background-color: rgba(245,162,9,0.1);
+    transition: border-right-color 0.5s ease; 
+
+    
+}
+.mainIcon > .MuiSvgIcon-root{
+    font-size: 20px;
+    margin-right: 5px;
+    color:rgba(245,162,9);
+}
+.mainIcon{
+    color : rgb(0,0,0,0.5);
+}
+.tags{
+    display: flex;
+    flex-direction: column;
+    color:rgba(0,0,0,0.5);
+    margin:0px,20px;
+}
+.tags >p{
+    margin:5px 0;
+}
+.tags >p:hover{
+    color:#000;
+}
+.mainIcon{
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space;
+}

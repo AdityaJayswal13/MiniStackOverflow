@@ -1,14 +1,24 @@
 // src/App.js
 import React from 'react';
 import Header from './components/Header/Header';
-
-import './App.css'; // Add your CSS styles here
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import StackOverflow from './components/StackOverflow';
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
+      <Router>
+        <Header />
+        <Switch>  
+          <Route exact path="/" component={StackOverflow} /> 
+        </Switch>
+      </Router>
     </div>
   );
 };
+
 export default App;

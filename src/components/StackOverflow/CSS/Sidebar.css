@@ -1,10 +1,9 @@
 .sidebar {
     display: flex;
-    padding: 20px 0px 0px 20px; /* Add left padding here */
+    padding: 20px 0px 0px 20px; 
     height: 100%;
     flex: 0.5;
     max-width: 200px;
-    /* border-right: 1px solid #ddd; */
 }
 .sidebar-container{
     display: flex;
@@ -56,15 +55,14 @@ a:hover{
     max-width: 172px;
     border-right: 6px solid rgb(255, 124, 1);
   overflow: hidden; 
-  transition: border-right-color 0.5s ease; 
+  
     
 }
 .mainIcon:hover{
     color:#000;
     max-width: 200px;
     border-right: 8px solid rgb(243, 132, 6);
-    background-color: rgba(245,162,9,0.1);
-    transition: border-right-color 0.5s ease; 
+    overflow: hidden;
 
     
 }
@@ -94,3 +92,4 @@ a:hover{
     align-items: center;
     justify-content: space;
 }
+ 

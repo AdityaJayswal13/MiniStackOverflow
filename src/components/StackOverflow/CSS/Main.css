@@ -32,6 +32,7 @@ button{
     cursor: pointer;
 }
 .main-dec{
+    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -49,20 +50,22 @@ button{
 .main-tabs{
     display: flex;
     flex-direction: row;
-    margin-left: 3px;
+    margin-left: 1px;
 }
 
 .main-tab{
     font-weight: 500;
-    opacity: 0.65;
-    padding: 7px;
-    font-size: 17px;
+    opacity: 1;
+    padding: 5px;
+    
 }
 .main-tab:hover{
     opacity: 1;
+    color:#fff;
     background-color:  rgba(255, 124, 1,1);
     border-radius: 20px;
     transition: 0.5s ease;
+    padding:5px;
 
     
     
@@ -108,6 +111,7 @@ button{
 }
 
 .main-tabs .main-tab {
+    
     display: inline-block;
     margin-right: 10px;
 }
@@ -156,3 +160,11 @@ button:hover {
     background-color: #0056b3;
 }
 
+
+.main-tab .active {
+    opacity: 1;
+    color: #ffffff;
+    background-color: #f48024;
+    padding:5px;
+    border-radius:23px;
+}

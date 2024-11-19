@@ -39,7 +39,7 @@ const Main = () => {
   
   useEffect(() => {
     fetchQuestions();
-  }, [selectedTab]);
+  }, [fetchQuestions, selectedTab]);
 
   return (
     <div className="main">

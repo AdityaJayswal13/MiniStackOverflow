@@ -1,11 +1,13 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import './CSS/Main.css';
 
 const Main = () => {
   const [selectedTab, setSelectedTab] = useState("Interesting");
-  const [questions, setQuestions] = useState([]); 
-  const [error, setError] = useState(null); 
-  const fetchQuestions = async (attempt = 1) => {
+  const [questions, setQuestions] = useState([]);
+  const [error, setError] = useState(null);
+
+  // UseCallback to memoize the function
+  const fetchQuestions = useCallback(async () => {
     const tabParams = {
       Interesting: "votes",
       Bountied: "activity",
@@ -15,18 +17,20 @@ const Main = () => {
     };
 
     const tab = tabParams[selectedTab] || "activity";
-    const apiUrl = `https://api.stackexchange.com/2.3/questions?order=desc&sort=${tab}&site=stackoverflow`;
+    const apiUrl = 'https://api.stackexchange.com/2.3/questions?order=desc&sort=${tab}&site=stackoverflow';
+
 
     try {
       const response = await fetch(apiUrl);
       const data = await response.json();
       console.log("API Response:", data);
+
       if (data.items && Array.isArray(data.items)) {
         setQuestions(data.items);
-        setError(null); 
+        setError(null);
       } else {
         console.error("Unexpected response structure:", data);
-        setQuestions([]); 
+        setQuestions([]);
         setError("Unexpected response structure from API.");
       }
     } catch (error) {
@@ -34,12 +38,12 @@ const Main = () => {
       setQuestions([]);
       setError("Failed to fetch questions. Please try again later.");
     }
-  };
+  }, [selectedTab]);
 
-  
+  // UseEffect to call the fetchQuestions
   useEffect(() => {
     fetchQuestions();
-  }, [fetchQuestions, selectedTab]);
+  }, [fetchQuestions]);
 
   return (
     <div className="main">
@@ -75,11 +79,12 @@ const Main = () => {
               <div key={question.question_id} className="question-card">
                 <h3>{question.title}</h3>
                 <div className="tags">
-                  {question.tags && question.tags.map((tag) => (
-                    <span key={tag} className="tag">
-                      {tag}
-                    </span>
-                  ))}
+                  {question.tags &&
+                    question.tags.map((tag) => (
+                      <span key={tag} className="tag">
+                        {tag}
+                      </span>
+                    ))}
                 </div>
                 <div className="info">
                   <span>{question.score} votes</span> |{" "}
@@ -93,9 +98,11 @@ const Main = () => {
           )}
         </div>
 
-        {error && <div className="error-message">{error}</div>} {/* Display error messages */}
+        {/* Display error messages */}
+        {error && <div className="error-message">{error}</div>}
       </div>
     </div>
   );
 };
+
 export default Main;

@@ -17,8 +17,7 @@ const Main = () => {
     };
 
     const tab = tabParams[selectedTab] || "activity";
-    const apiUrl = 'https://api.stackexchange.com/2.3/questions?order=desc&sort=${tab}&site=stackoverflow';
-
+    const apiUrl = `https://api.stackexchange.com/2.3/questions?order=desc&sort=${tab}&site=stackoverflow`;
 
     try {
       const response = await fetch(apiUrl);

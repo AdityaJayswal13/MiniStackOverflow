@@ -217,7 +217,11 @@ button:hover {
     display: flex;
     flex-direction: row;
     padding-left: 20px;
+    justify-content: space-between;
     
+}
+.info-content{
+    display: flex;
 }
 .info-buttons{
     display: flex;
@@ -229,4 +233,9 @@ button:hover {
 }
 .icon-info{
     padding-left: 5px;
+}
+
+.author >strong{
+    color:#007bff
+   
 }

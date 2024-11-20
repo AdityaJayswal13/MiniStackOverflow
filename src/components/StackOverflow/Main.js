@@ -3,6 +3,7 @@ import './CSS/Main.css';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
+
 const Main = () => {
   const [selectedTab, setSelectedTab] = useState("Interesting");
   const [questions, setQuestions] = useState([]);
@@ -46,6 +47,12 @@ const Main = () => {
     fetchQuestions();
   }, [fetchQuestions]);
 
+  // Convert Unix timestamp to readable date
+  const formatDate = (timestamp) => {
+    const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
+    return date.toLocaleString(); // Localized date and time
+  };
+
   return (
     <div className="main">
       <div className="main-container">
@@ -88,27 +95,39 @@ const Main = () => {
                     ))}
                 </div>
                 <div className="info">
-                  <div className='info-buttons '>
-                    <div className='icon likes'><ChangeHistoryIcon/>
+                  {/* Additional Info */}
+                  <div className="info-content">
+                  
+                  <div className="info-buttons">
+                    <div className="icon likes">
+                      <ChangeHistoryIcon />
                     </div>
-                    <div className='icon-info'>
-                    <span>{question.score}</span>
+                    <div className="icon-info">
+                      <span>{question.score}</span>
                     </div>
-                </div>
-                <div className='info-buttons'>
-                    <div className='icon'><ForumOutlinedIcon/>
+                  </div>
+                  <div className="info-buttons">
+                    <div className="icon">
+                      <ForumOutlinedIcon />
                     </div>
-                    <div className='icon-info'>
-                    <span>{question.answer_count} </span>
+                    <div className="icon-info">
+                      <span>{question.answer_count}</span>
                     </div>
-                </div>
-                <div className='info-buttons'>
-                    <div className='icon'><RemoveRedEyeOutlinedIcon/>
+                  </div>
+                  <div className="info-buttons">
+                    <div className="icon">
+                      <RemoveRedEyeOutlinedIcon />
                     </div>
-                    <div className='icon-info'>
-                    <span>{question.view_count} </span>
+                    <div className="icon-info">
+                      <span>{question.view_count}</span>
                     </div>
-                </div>
+                  </div>
+                  </div>
+                  <p className="author">
+                    Asked by <strong>{question.owner?.display_name || "Anonymous"}</strong>
+                    {' '}
+                    on {formatDate(question.creation_date)}
+                  </p>
                 </div>
               </div>
             ))

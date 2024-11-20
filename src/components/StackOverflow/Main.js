@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import './CSS/Main.css';
-
+import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
+import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
 const Main = () => {
   const [selectedTab, setSelectedTab] = useState("Interesting");
   const [questions, setQuestions] = useState([]);
@@ -86,8 +87,8 @@ const Main = () => {
                     ))}
                 </div>
                 <div className="info">
-                  <span>{question.score} votes</span> |{" "}
-                  <span>{question.answer_count} answers</span> |{" "}
+                  <span><ChangeHistoryIcon/>{question.score}</span> |{" "}
+                  <span>{question.answer_count} </span> |{" "}
                   <span>{question.view_count} views</span>
                 </div>
               </div>

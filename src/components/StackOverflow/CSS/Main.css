@@ -85,16 +85,13 @@ button{
  .questions{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    
+    width: 100%;    
  }
 
  .question{
-    
     display: flex;
     flex-direction: column;
     width: 100%;
-   
  }
  /* Example CSS */
 
@@ -124,6 +121,7 @@ button{
 
 .questions {
     margin-top: 20px;
+    
 }
 
 .question-item {
@@ -168,4 +166,26 @@ button:hover {
     background-color: #f48024;
     padding:5px;
     border-radius:23px;
+}
+.tags{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 25px;
+    padding:10px;
+    margin-bottom: 25px;
+}
+.tag{
+    margin-right: 15px;
+    /* background-color: #f48024; */
+    padding:3px 20px 4px 20px;
+    border:1px solid #cfcaca;
+    border-radius: 20px;
+}
+.tag:hover{
+    background-color: #f48024;
+    color:#fff;
+    opacity: 1;
+    outline: none;
+    cursor: pointer;
 }

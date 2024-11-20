@@ -88,7 +88,7 @@ const Main = () => {
                 </div>
                 <div className="info">
                   <span><ChangeHistoryIcon/>{question.score}</span> |{" "}
-                  <span>{question.answer_count} </span> |{" "}
+                  <span><ForumOutlinedIcon/>{question.answer_count} </span> |{" "}
                   <span>{question.view_count} views</span>
                 </div>
               </div>

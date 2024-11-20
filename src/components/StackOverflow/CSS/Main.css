@@ -11,6 +11,7 @@
     width: 100%;
 }
 .main-top{
+    margin-top:-20px;
     display: flex;      
     width: 100%;
     align-items: center;

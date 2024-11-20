@@ -2,6 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react';
 import './CSS/Main.css';
 import ChangeHistoryIcon from '@mui/icons-material/ChangeHistory';
 import ForumOutlinedIcon from '@mui/icons-material/ForumOutlined';
+import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 const Main = () => {
   const [selectedTab, setSelectedTab] = useState("Interesting");
   const [questions, setQuestions] = useState([]);
@@ -87,9 +88,27 @@ const Main = () => {
                     ))}
                 </div>
                 <div className="info">
-                  <span><ChangeHistoryIcon/>{question.score}</span> |{" "}
-                  <span><ForumOutlinedIcon/>{question.answer_count} </span> |{" "}
-                  <span>{question.view_count} views</span>
+                  <div className='info-buttons '>
+                    <div className='icon likes'><ChangeHistoryIcon/>
+                    </div>
+                    <div className='icon-info'>
+                    <span>{question.score}</span>
+                    </div>
+                </div>
+                <div className='info-buttons'>
+                    <div className='icon'><ForumOutlinedIcon/>
+                    </div>
+                    <div className='icon-info'>
+                    <span>{question.answer_count} </span>
+                    </div>
+                </div>
+                <div className='info-buttons'>
+                    <div className='icon'><RemoveRedEyeOutlinedIcon/>
+                    </div>
+                    <div className='icon-info'>
+                    <span>{question.view_count} </span>
+                    </div>
+                </div>
                 </div>
               </div>
             ))

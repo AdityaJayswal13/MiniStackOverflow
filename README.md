@@ -1,7 +1,9 @@
 
 
 # MiniStackOverflow
-, I built a pixel-perfect, static web page using React (or Vue.js), following a provided design closely. The core feature of the project was integrating the StackOverflow API to dynamically fetch and display questions, allowing users to filter by different criteria like "hot," "week," and more. Additionally, I implemented a search functionality to allow users to find specific questions. The project emphasizes both design precision and interactive elements, ensuring a smooth and responsive user experience
+I built a pixel-perfect, static web page using React, following a provided design closely. The core feature of the project was integrating the StackOverflow API to dynamically fetch and display questions, allowing users to filter by different criteria like "hot," "week," and more. Additionally, I implemented a search functionality to allow users to find specific questions. The project emphasizes both design precision and interactive elements, ensuring a smooth and responsive user experience
+
+Any Changes we welcome 🤗 
 =======
 # Getting Started with Create React App
 

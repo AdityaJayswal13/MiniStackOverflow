@@ -78,6 +78,7 @@
  .question-card{
     padding: 5px;
     padding-left: 15px;
+    padding-right:15px ;
     margin-bottom: 20px;
     border-bottom: 1px solid #eee;
  }
@@ -90,7 +91,15 @@
     border-bottom: 1px solid #eee;
     transition: all 0.4s ease;
  }
- /* Example CSS */
+
+
+.question-card:hover > h3 {
+    opacity: 1; 
+}
+.question-card:hover .MuiSvgIcon-root {
+    opacity: 1;
+}
+ 
 
 .main-container {
     margin: 20px;

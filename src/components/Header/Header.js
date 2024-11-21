@@ -1,11 +1,11 @@
 // src/components/Header.js
 import React from 'react';
 import './CSS/Header.css'
-import SearchIcon from '@mui/icons-material/Search';
 import { Avatar } from '@mui/material';
 import ChatBubbleOutlineIcon from '@mui/icons-material/ChatBubbleOutline';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import SpeakerNotesRoundedIcon from '@mui/icons-material/SpeakerNotesRounded';
+import SearchBar from './SearchBar';
 const Header = () => {
   return (
     <header>
@@ -17,10 +17,7 @@ const Header = () => {
           />
         </div>
         <div className='header-middle'>
-          <div className='header-search-container'>
-          <input placeholder='Search Your Answer Here...'/>
-          <SearchIcon/>
-          </div>
+          <SearchBar/>
           <h3>Products</h3>
         </div>
         <div className='header-right'> 

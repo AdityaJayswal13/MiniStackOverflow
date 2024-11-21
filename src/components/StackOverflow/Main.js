@@ -42,15 +42,13 @@ const Main = () => {
     }
   }, [selectedTab]);
 
-  // UseEffect to call the fetchQuestions
+  
   useEffect(() => {
     fetchQuestions();
   }, [fetchQuestions]);
-
-  // Convert Unix timestamp to readable date
   const formatDate = (timestamp) => {
-    const date = new Date(timestamp * 1000); // Convert seconds to milliseconds
-    return date.toLocaleString(); // Localized date and time
+    const date = new Date(timestamp * 1000); 
+    return date.toLocaleString();
   };
 
   return (
@@ -95,7 +93,6 @@ const Main = () => {
                     ))}
                 </div>
                 <div className="info">
-                  {/* Additional Info */}
                   <div className="info-content">
                   
                   <div className="info-buttons">

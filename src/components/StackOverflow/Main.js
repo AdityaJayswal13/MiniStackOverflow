@@ -46,11 +46,17 @@ const Main = () => {
   useEffect(() => {
     fetchQuestions();
   }, [fetchQuestions]);
-  const formatDate = (timestamp) => {
-    const date = new Date(timestamp * 1000); 
-    return date.toLocaleString();
+  const formatDuration = (timestamp) => {
+    const now = Math.floor(Date.now() / 1000); 
+    const durationInSeconds = now - timestamp;
+    const secondsInAMonth = 30 * 24 * 60 * 60; 
+    const secondsInADay = 24 * 60 * 60; 
+  
+    const months = Math.floor(durationInSeconds / secondsInAMonth);
+    const days = Math.floor((durationInSeconds % secondsInAMonth) / secondsInADay);
+  
+    return `${months} month${months !== 1 ? 's' : ''} ${days} day${days !== 1 ? 's' : ''} ago`;
   };
-
   return (
     <div className="main">
       <div className="main-container">
@@ -121,9 +127,9 @@ const Main = () => {
                   </div>
                   </div>
                   <p className="author">
-                    Asked by <strong>{question.owner?.display_name || "Anonymous"}</strong>
+                    asked  {formatDuration(question.creation_date)}: <strong>{question.owner?.display_name || "Anonymous"}</strong>
                     {' '}
-                    on {formatDate(question.creation_date)}
+                    
                   </p>
                 </div>
               </div>

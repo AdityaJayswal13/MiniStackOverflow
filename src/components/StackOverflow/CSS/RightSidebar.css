@@ -1,6 +1,4 @@
- 
-
-.right-sidebar {
+ .right-sidebar {
     width: 300px; 
     background-color: #f9f9f9; 
     padding: 20px;
@@ -9,10 +7,14 @@
   .right-sidebar-container {
     display: flex;
     flex-direction: column; 
+    border-radius: 20px;
   }
   
   .right-sidebar-upper-section {
     padding-left: 20px;
+    border-top-left-radius:20px ;
+    border-top-right-radius:20px ;
+
     flex: 1; 
     margin-bottom: 20px; 
     background-color: rgba(196, 192, 192, 0.1);
@@ -50,9 +52,10 @@
   }
   
   .right-sidebar-bottom-section {
-    background-color: #e9ecef;
+    margin-top:25px;
+    background-color: #f3f3f3;
     padding: 15px; 
-    border-radius: 5px; 
+    border-radius: 25px; 
   }
   
   .bottom-header {
@@ -80,8 +83,15 @@
     opacity:1;
     cursor:pointer;
   }
-  
-  
+  .right-sidebar-middle-section{
+    margin-top: -10px;
+    
+  }
+  .post-section{
+    border-bottom-left-radius:20px ;
+    border-bottom-right-radius:20px ;
+    padding-bottom: 5px;
+  }
   @media (max-width: 768px) {
     .right-sidebar {
         width: 100%; 
